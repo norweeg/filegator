@@ -61,11 +61,6 @@
                                             Development
                                         </a>
                                     </li>
-                                                                    <li class="">
-                                        <a href="https://docs.filegator.io/demo.html">
-                                            Demo
-                                        </a>
-                                    </li>
                                                             </ul>
                                                     <p class="text-muted">
                                 Configuration
@@ -205,6 +200,8 @@ VALUES
                     'ldap_attributes' =&gt; ["uid","cn","dn"],
                     'ldap_userFieldMapping'=&gt; [
                         'username' =&gt;'uid',
+                        'username_AddDomain' =&gt;'@example.com',
+                        'username_RemoveDomains' =&gt;['@department1.example.com', '@department2.example.com'],
                         'name' =&gt;'cn',
                         'userDN' =&gt;'dn',
                         'default_permissions' =&gt; 'read|write|upload|download|batchdownload|zip',
